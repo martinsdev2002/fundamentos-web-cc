@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXEMPLO FORMULÁRIO HTML</title>
+</head>
+<body>
+    <header>
+        <h3>Formulários e inputs</h3>
+    </header>
+    <main>
+        <h1> Cria um campo para inserir Dados.</h1>
+        <br>
+        <form id="registerform" method="post">
+            <label> Nome completo: </label>
+            <input type="text" id="nome" name="nome"
+            required/>
+            <br>
+            <label for="email"> Endereço de e-mail </label>
+            <input type="email" id="email" name="email"/>
+            <br>
+            <label for="senha"> Informe a senha </label>
+            <input type="password" id="senha" name="senha" required minlength="8" title="A senha deve ter no minimo 8 caracteres"/>
+        
+            <br>
+            <label for="mensagem"> Informe a sua mensagem:</label>
+            <br>
+            <textarea id="mensagem" name="mensagem"rows="4" cols="30"></textarea>
+            <br>
+            <label for="evento"> Selecione o evento escolhido:</label>
+            <br>
+            <select id="evento" name="evento">
+                <option value="rock"> show de rock </option>
+                <option value="modao"> show de sertanejo </option>
+                <option value="teatro: comédia"> teatro: comédia</option>                
+            </select>
+            <br>
+            <label for="termos">
+                <input type="checkbox" id="termos" name="termos"
+                required>
+                Aceito os termos de uso.
+            </label>
+            <br>
+            <!-- Input type radio - Escolha unica  -->
+            <label><input type="radio" name="pagamento" value="pix"/> Pix</label>
+            <label><input type="radio" name="pagamento" value="cartão"/> Cartão</label>
+            <br>
+            <input type="date"/>
+            <br>
+            <input type="file"/>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required pattern="\d{3}\.d{3}\.\d{3}-\d{2}"/>
+                <!-- Para o type radio funcionar ambos os inputs devem compartilhar o mesmo name -->
+            <br>
+            <input type="submit" value="cadastrar">
+            <button type="button" onclick="">Cancelar</button>
+        </form>
+    </main>
+    <footer>
+        <p> Desenvolvido por Lucas Martins.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registerform').addEventListerner('submit', function (event)
+        {
+            event.preventDefault(); // impede o comportamento padrão de envio do formulário(recarregamento)
+            const nome = document.getElementbyId('nome').value;
+            alert('Olá,'+ nome + "cadastro enviado com sucesso");
+        })
+
+    </script>
+</body>
+</html>

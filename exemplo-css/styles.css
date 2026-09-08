@@ -1,0 +1,27 @@
+/*Principais seletores CSS*/
+
+
+*{  /*seletor universal*/
+    margin: 0;        /*margin é o espaçamento externo do elemento*/
+    padding: 0;      /*padding é o espaçamento interno do elemneto */
+    box-sizing: border-box;
+}
+
+/*seletor por tag*/
+p {
+    color: darkred;
+}
+
+/*seletor por classe */
+.exemplo-classe{
+    color: aqua;
+}
+
+/* Seletor por ID*/
+#email{
+    background-color: darkgray;
+    height: 20px;
+    border-radius: 25px;
+}
+
+

@@ -78,11 +78,49 @@
             <h2>Contato</h2>
             <p>Dúvidas? Fale com a gente pelo e-mail <a href="mailto:contato@ingressosfacil.com">contato@ingressosfacil.com</a>.</p>
         </section>
+
+        <section id="video">
+            <video id="videoEvento"  width="480" poster="./logo.jpg" controls muted autoplay loop>
+                <source src="./video.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.                
+            </video>
+        </section>
+
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb..." width="100%" height="300" loading="lazy" style="border: 0;" allowfullscreen> 
+            </iframe>
+        </section>
+
+        <section id="exemplos-canvas">
+            <canvas id="seloEvento" height="200" width="200">
+            </canvas>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 IngressosFácil - Todos os direitos reservados</p>
     </footer>
+
+<script>
+    const canvas = document.getElementById('seloEvento');
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(100, 100, 90, 0, Math.PI * 2);
+    ctx.fillStyle = '#2c3e50';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(100, 100, 90, 0, Math.PI * 2);
+    ctx.strokeStyle = '#f4d03f';
+    ctx.lineWidth = 6;
+    ctx.stroke();
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 20px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('VIP', 100, 108);
+</script>	
+    
 
 </body>
 </html>
